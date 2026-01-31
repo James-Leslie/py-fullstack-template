@@ -43,13 +43,25 @@ uv sync
 **FastAPI:**
 
 ```bash
-uv run uvicorn api.main:app --reload
+uv run fastapi dev api/main.py
 ```
 
 **Streamlit:**
 
 ```bash
-uv run streamlit run app/streamlit_app.py
+uv run streamlit run app/app.py
+```
+
+**Full-Stack (both applications):**
+
+Run both commands in separate terminals:
+
+```bash
+# Terminal 1 - API (http://localhost:8000)
+uv run fastapi dev api/main.py
+
+# Terminal 2 - Frontend (http://localhost:8501)
+uv run streamlit run app/app.py
 ```
 
 ## Project Structure
