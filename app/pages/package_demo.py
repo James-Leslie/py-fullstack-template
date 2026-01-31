@@ -5,32 +5,44 @@ import streamlit as st
 from example_pkg import Counter
 
 st.header("Package Demo")
-st.markdown("This page demonstrates direct usage of the `example_pkg.Counter` class.")
+st.caption("Direct usage of the `example_pkg.Counter` class")
 
-# Initialize session state for persistent counter
+# Initialize session state
 if "counter" not in st.session_state:
     st.session_state.counter = Counter()
+if "last_value" not in st.session_state:
+    st.session_state.last_value = 0
 
-# Display current value
-st.metric("Current Value", st.session_state.counter.value)
+# Calculate delta for metric
+current = st.session_state.counter.value
+delta = (
+    current - st.session_state.last_value
+    if st.session_state.last_value != current
+    else None
+)
 
-# Controls
-col1, col2, col3 = st.columns(3)
+# Counter display
+col_display, col_controls = st.columns([1, 2])
 
-with col1:
-    amount = st.number_input("Amount", min_value=1, value=1, key="amount")
+with col_display:
+    st.metric("Counter", current, delta=delta)
 
-with col2:
-    if st.button("Increment", use_container_width=True):
-        st.session_state.counter.increment(amount)
-        st.rerun()
+with col_controls:
+    amount = st.slider("Step amount", min_value=1, max_value=10, value=1)
 
-with col3:
-    if st.button("Decrement", use_container_width=True):
-        st.session_state.counter.decrement(amount)
-        st.rerun()
-
-# Reset button
-if st.button("Reset Counter"):
-    st.session_state.counter = Counter()
-    st.rerun()
+    btn_col1, btn_col2, btn_col3 = st.columns(3)
+    with btn_col1:
+        if st.button("➖", use_container_width=True, help="Decrement"):
+            st.session_state.last_value = current
+            st.session_state.counter.decrement(amount)
+            st.rerun()
+    with btn_col2:
+        if st.button("Reset", use_container_width=True, type="secondary"):
+            st.session_state.last_value = 0
+            st.session_state.counter = Counter()
+            st.rerun()
+    with btn_col3:
+        if st.button("➕", use_container_width=True, type="primary", help="Increment"):
+            st.session_state.last_value = current
+            st.session_state.counter.increment(amount)
+            st.rerun()

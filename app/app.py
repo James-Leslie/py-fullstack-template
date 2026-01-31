@@ -8,7 +8,8 @@ pg = st.navigation(
     [
         st.Page("pages/package_demo.py", title="Package Demo", icon="📦"),
         st.Page("pages/api_client.py", title="API Client", icon="🌐"),
-    ]
+    ],
+    position="top",
 )
 
 st.title("py-fullstack-template")
