@@ -47,16 +47,8 @@ Update references in `pyproject.toml` and any imports.
 
 ### 3. Install Dependencies
 
-Using UV (recommended):
-
 ```bash
 uv sync
-```
-
-Or using pip:
-
-```bash
-pip install -e .
 ```
 
 ### 4. Customize for Your Use Case
