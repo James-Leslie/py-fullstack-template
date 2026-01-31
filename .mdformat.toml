@@ -1,0 +1,7 @@
+wrap = "keep"           # Preserve existing line wrapping
+number = true           # Use consecutive numbering for list items
+end_of_line = "lf"      # Unix-style line endings
+exclude = [
+    ".venv/**",         # Virtual environment
+    ".pytest_cache/**", # Pytest cache
+]

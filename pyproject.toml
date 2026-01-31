@@ -13,3 +13,9 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "example_pkg"
 module-root = ""
+
+[dependency-groups]
+dev = [
+    "mdformat>=1.0.0",
+    "mdformat-frontmatter>=2.0.10",
+]
