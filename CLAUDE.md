@@ -18,6 +18,11 @@ Wherever possible, use the uv CLI for all operations, rather than editing `pypro
 
 > Reference: [uv Documentation](https://docs.astral.sh/uv/)
 
+## Running Applications
+
+- Run FastAPI: `uv run fastapi dev api/main.py`
+- Run Streamlit: `uv run streamlit run app/app.py`
+
 ## Documentation
 
 Zensical, and all necessary plugin dependencies, are installed as dev dependencies and managed via `uv`.
