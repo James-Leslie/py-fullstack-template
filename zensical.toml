@@ -2,6 +2,11 @@
 site_name = "py-fullstack-template"
 # Update this URL when you deploy your documentation
 site_url = "https://example.com/docs"
+nav = [
+    { "Home" = "index.md" },
+    { "Guide" = ["guide/getting-started.md", "guide/publishing.md"] },
+    { "Reference" = ["reference/index.md"] },
+]
 
 [project.theme]
 features = ["navigation.tabs"]

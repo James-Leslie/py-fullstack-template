@@ -6,7 +6,7 @@ This documentation site was generated using [Zensical](https://zensical.org/).
 
 ## Getting Started
 
-See the [Getting Started](getting-started.md) guide to begin.
+See the [Getting Started](guide/getting-started.md) guide to begin.
 
 ## API Reference
 
@@ -14,4 +14,4 @@ Browse the [API Reference](reference/index.md) for detailed documentation of the
 
 ## Publishing
 
-Learn how to [publish your documentation](publishing.md) to GitHub Pages.
+Learn how to [publish your documentation](guide/publishing.md) to GitHub Pages.
