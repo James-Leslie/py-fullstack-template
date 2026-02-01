@@ -1,32 +1,27 @@
-# Getting Started
+## Configuration
 
-## Installation
+All of your documentation site configuration is stored in the `zensical.toml` file in the root of your project.
 
-```bash
-uv sync
-```
+## Create your site
 
-## Running the Applications
+### Preview as you write
 
-### FastAPI Backend
+You can preview your documentation site locally as you write by using the following command:
 
 ```bash
-uv run fastapi dev api/main.py
+uv run zensical serve
 ```
 
-The API will be available at `http://localhost:8000`.
+The site will be available at `http://localhost:8000`.
 
-### Streamlit Frontend
+### Build your site
+
+To build your documentation site for deployment, run:
 
 ```bash
-uv run streamlit run app/app.py
+uv run zensical build
 ```
 
-The app will be available at `http://localhost:8501`.
+## API reference
 
-## Project Structure
-
-- `example_pkg/` - Core package with shared business logic
-- `api/` - FastAPI backend application
-- `app/` - Streamlit frontend application
-- `tests/` - Test suite
+Your project's [API reference](../reference/index.md) documentation is automatically generated from your code's docstrings, using `mkdocstrings`.
