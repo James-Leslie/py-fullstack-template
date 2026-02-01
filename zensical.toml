@@ -1,7 +1,8 @@
 [project]
 site_name = "py-fullstack-template"
-# Update this URL when you deploy your documentation
+# Update these URLs when you deploy your documentation
 site_url = "https://example.com/docs"
+repo_url = "https://github.com/James-Leslie/py-fullstack-template"
 nav = [
     { "Home" = "index.md" },
     { "Guide" = ["guide/getting-started.md", "guide/publishing.md"] },
