@@ -1,0 +1,28 @@
+[project]
+site_name = "py-fullstack-template"
+# Update these URLs when you deploy your documentation
+site_url = "https://example.com/docs"
+repo_url = "https://github.com/James-Leslie/py-fullstack-template"
+nav = [
+    { "Home" = "index.md" },
+    { "Guide" = ["guide/getting-started.md", "guide/publishing.md"] },
+    { "API Reference" = ["reference/index.md"] },
+]
+
+[project.theme]
+features = ["navigation.tabs"]
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["example_pkg"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "google"
+ignore_init_summary = true
+inherited_members = true
+members_order = "source"
+merge_init_into_class = true
+show_signature_annotations = true
+show_source = false
+show_symbol_type_heading = true
+show_symbol_type_toc = true
+unwrap_annotations = true
