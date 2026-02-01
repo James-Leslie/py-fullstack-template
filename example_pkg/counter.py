@@ -4,13 +4,13 @@
 class Counter:
     """A counter that can be incremented and decremented.
 
-    Examples:
-        ```python
-        counter = Counter(start=10)
-        counter.increment()   # returns 11
-        counter.decrement(5)  # returns 6
-        counter.value         # 6
-        ```
+    Example:
+        Creating and using a counter::
+
+            counter = Counter(start=10)
+            counter.increment()   # returns 11
+            counter.decrement(5)  # returns 6
+            counter.value         # 6
     """
 
     def __init__(self, start: int = 0) -> None:
