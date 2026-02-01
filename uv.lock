@@ -658,6 +658,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/57/32/407a9a5fdd7d8ecb4af8d830b9bcdf47ea68f916869b3f44bac31f081250/mkdocstrings-1.0.2-py3-none-any.whl", hash = "sha256:41897815a8026c3634fe5d51472c3a569f92ded0ad8c7a640550873eea3b6817", size = 35443, upload-time = "2026-01-24T15:57:23.933Z" },
 ]
 
+[package.optional-dependencies]
+python = [
+    { name = "mkdocstrings-python" },
+]
+
 [[package]]
 name = "mkdocstrings-python"
 version = "2.0.1"
@@ -894,7 +899,7 @@ dependencies = [
 dev = [
     { name = "mdformat" },
     { name = "mdformat-frontmatter" },
-    { name = "mkdocstrings-python" },
+    { name = "mkdocstrings", extra = ["python"] },
     { name = "pytest" },
     { name = "ruff" },
     { name = "zensical" },
@@ -911,7 +916,7 @@ requires-dist = [
 dev = [
     { name = "mdformat", specifier = ">=1.0.0" },
     { name = "mdformat-frontmatter", specifier = ">=2.0.10" },
-    { name = "mkdocstrings-python", specifier = ">=2.0.1" },
+    { name = "mkdocstrings", extras = ["python"], specifier = ">=1.0.2" },
     { name = "pytest", specifier = ">=9.0.2" },
     { name = "ruff", specifier = ">=0.14.14" },
     { name = "zensical", specifier = ">=0.0.20" },
