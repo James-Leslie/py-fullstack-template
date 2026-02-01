@@ -1,0 +1,11 @@
+[project]
+site_name = "py-fullstack-template"
+# Update this URL when you deploy your documentation
+site_url = "https://example.com/docs"
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["."]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "google"
+show_source = true
