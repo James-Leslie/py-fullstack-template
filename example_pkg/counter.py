@@ -4,20 +4,23 @@
 class Counter:
     """A counter that can be incremented and decremented.
 
-    Example:
-        Creating and using a counter::
+    ## Example:
 
-            counter = Counter(start=10)
-            counter.increment()   # returns 11
-            counter.decrement(5)  # returns 6
-            counter.value         # 6
+    ```python
+    from example_pkg.counter import Counter
+
+
+    counter = Counter(start=10)
+    counter.increment()   # returns 11
+    counter.decrement(5)  # returns 6
+    counter.value         # 6
+    ```
     """
 
     def __init__(self, start: int = 0) -> None:
-        """Initialize the counter with an optional starting value.
-
+        """
         Args:
-            start: The initial value for the counter. Defaults to 0.
+            start: The initial value for the counter.
         """
         self._count = start
 
@@ -34,7 +37,7 @@ class Counter:
         """Increment the counter and return the new value.
 
         Args:
-            amount: The amount to increment by. Defaults to 1.
+            amount: The amount to increment by.
 
         Returns:
             The new counter value after incrementing.
@@ -46,7 +49,7 @@ class Counter:
         """Decrement the counter and return the new value.
 
         Args:
-            amount: The amount to decrement by. Defaults to 1.
+            amount: The amount to decrement by.
 
         Returns:
             The new counter value after decrementing.

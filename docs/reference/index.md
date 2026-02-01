@@ -1,3 +1,1 @@
-# API Reference
-
-::: example_pkg
+::: example_pkg.Counter
