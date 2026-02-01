@@ -6,7 +6,7 @@ repo_url = "https://github.com/James-Leslie/py-fullstack-template"
 nav = [
     { "Home" = "index.md" },
     { "Guide" = ["guide/getting-started.md", "guide/publishing.md"] },
-    { "Reference" = ["reference/index.md"] },
+    { "API Reference" = ["reference/counter.md"] },
 ]
 
 [project.theme]
@@ -18,3 +18,4 @@ paths = ["."]
 [project.plugins.mkdocstrings.handlers.python.options]
 docstring_style = "google"
 show_source = true
+merge_init_into_class = true
