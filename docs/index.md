@@ -11,3 +11,7 @@ See the [Getting Started](getting-started.md) guide to begin.
 ## API Reference
 
 Browse the [API Reference](reference/index.md) for detailed documentation of the Python package.
+
+## Publishing
+
+Learn how to [publish your documentation](publishing.md) to GitHub Pages.
