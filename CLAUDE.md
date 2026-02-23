@@ -13,6 +13,7 @@
 - Add dev dependencies: `uv add --dev <package>`
 - Remove dependencies: `uv remove <package>`
 - Sync dependencies: `uv sync`
+- Type check: `uv run ty check`
 
 Wherever possible, use the uv CLI for all operations, rather than editing `pyproject.toml` directly.
 
@@ -60,6 +61,7 @@ IMPORTANT: Follow this sequence for ALL development tasks
 - After completing each item:
   - Ensure Python code is formatted: `uv run ruff format <file>`
   - Ensure markdown is formatted: `uv run mdformat <file.md>`
+  - Run type checking: `uv run ty check`
   - Run tests if applicable: `uv run pytest <relevant_tests>`
   - Create a focused commit: `git add <files> && git commit -m "<clear message>"`
   - Repeat until all items complete
