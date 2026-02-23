@@ -17,6 +17,8 @@ class Counter:
     ```
     """
 
+    _count: int
+
     def __init__(self, start: int = 0) -> None:
         """
         Args:
@@ -37,11 +39,16 @@ class Counter:
         """Increment the counter and return the new value.
 
         Args:
-            amount: The amount to increment by.
+            amount: The amount to increment by. Must be a positive integer.
 
         Returns:
             The new counter value after incrementing.
+
+        Raises:
+            ValueError: If amount is not a positive integer.
         """
+        if amount <= 0:
+            raise ValueError(f"amount must be positive, got {amount}")
         self._count += amount
         return self._count
 
@@ -49,10 +56,15 @@ class Counter:
         """Decrement the counter and return the new value.
 
         Args:
-            amount: The amount to decrement by.
+            amount: The amount to decrement by. Must be a positive integer.
 
         Returns:
             The new counter value after decrementing.
+
+        Raises:
+            ValueError: If amount is not a positive integer.
         """
+        if amount <= 0:
+            raise ValueError(f"amount must be positive, got {amount}")
         self._count -= amount
         return self._count

@@ -1,13 +1,13 @@
 [project]
 name = "py-fullstack-template"
-version = "0.1.4"
+version = "0.1.5"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "fastapi[standard]>=0.128.0",
+    "fastapi[standard]>=0.131.0",
     "requests>=2.32.5",
-    "streamlit>=1.53.1",
+    "streamlit>=1.54.0",
 ]
 
 [build-system]
@@ -22,8 +22,16 @@ module-root = ""
 dev = [
     "mdformat>=1.0.0",
     "mdformat-frontmatter>=2.0.10",
-    "mkdocstrings[python]>=1.0.2",
+    "mkdocstrings[python]>=1.0.3",
     "pytest>=9.0.2",
-    "ruff>=0.14.14",
-    "zensical>=0.0.20",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.15.2",
+    "ty>=0.0.18",
+    "zensical>=0.0.23",
 ]
+
+[tool.ty]
+environment = { python-version = "3.13" }
+
+[tool.pytest.ini_options]
+addopts = "--cov=example_pkg --cov-report=term-missing"
